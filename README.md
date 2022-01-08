@@ -10,12 +10,12 @@
 
 ---
 
-#### Description
+##### Description
 + You can customize <b>icon</b>, <b>theme</b> or <b>color</b> for <b>Checkbox/Radio</b>
 + Single option
 + It is not `react-radio-checkbox-z`
 
-#### Usage
+##### Usage
 ```js
 npm install --save react-radio-checkbox-2z
 ```
@@ -30,14 +30,15 @@ import RadioOrCbx from "react-radio-checkbox-2z";
     const [value, setValue] = useState('label1') // radio
     // const [value, setValue] = useState(['label1']) // radio || checkbox
 
-    <RadioOrCbx optionLabel='abcd1' optionValue='ab1' selectedValue={value} onChange={setValue} />
-    <RadioOrCbx optionLabel='abcd2' optionValue='ab2' selectedValue={value} onChange={setValue} />
+    <RadioOrCbx optionLabel='abcd1' optionValue='ab1' value={value} onChange={setValue} />
+
+    <RadioOrCbx optionLabel='abcd2' optionValue='ab2' value={value} onChange={setValue} />
 
     // Customize label
-    <RadioOrCbx optionValue='ds2' selectedValue={value} onChange={setValue}>Label</RadioOrCbx>
+    <RadioOrCbx optionValue='ds2' value={value} onChange={setValue}>Label</RadioOrCbx>
 ```
 
-#### Props
+##### Props
 
 | props                | type                          | description                                                                |
 |----------------------|-------------------------------|----------------------------------------------------------------------------|
@@ -46,27 +47,30 @@ import RadioOrCbx from "react-radio-checkbox-2z";
 | className            | String                        | css                                                                        |
 | disabled             | boolean                       |                                                                            |
 | boxSize              | number                        | default: 16                                                                |
-| typeCheckbox         | boolean                       | default: `false` (radio)                                                   |
+| typeCheckbox         | boolean                       | default: `false` (it is radio)                                             |
 | floatRight           | boolean                       | default: `false` (Check in left)                                           |
 | isRect               | boolean                       | default: `false` (Checkbox is circle)                                      |
 | groupName            | String                        | groupName of radio/checkbox                                                |
 |                      |                               |                                                                            |
-| selectColor          | String                        | Default `#4169E1` (color when checked)                                     |
-| unSelectColor        | String                        | Default `#cbd1d8` (color when unchecked)                                   |
-| hoverColor           | String                        | Color when hover. Default using (selectColor)                              |
-| tabFocusColor        | String                        | Default `#000000`  box shadow color when focus                             |
+| selectColor          | String                        | default `#4169E1` (color when checked)                                     |
+| unSelectColor        | String                        | default `#cbd1d8` (color when unchecked)                                   |
+| hoverColor           | String                        | default  use selectColor (Color when hover)                                |
+| tabFocusColor        | String                        | default `#000000`. Box shadow color when focus                             |
 | tickColor            | String                        | Color of tick when check.                                                  |
 |                      |                               |                                                                            |
-| checkedIcon          |                               | Customize icon                                                             |
+| checkedIcon          |                               | Customize icon. (Change your icon checked)                                 |
 | optionLabel          |                               | Display label text                                                         |
-| optionValue          | any                           | Value option (`string` || `number`)                                        |
-| selectedValue        | Single, Array                 | Current selected value                                                     |
+| optionValue          |                               | Value option (`string` or `number`)                                        |
+| value        | Single, Array                 | Current selected value                                                     |
 | onChange             | func                          | Event change                                                               |
+| `...props`           | any                           | Prop of input. (It's not necessary)                                        |
 
 ##### Note
 Theme 'fill', 'in', 'out', 'tick', 'tick-fill', 'tick-fill-in', 'x', 'x-fill', 'x-fill-in'
 
-#### Example
+<br />
+
+##### Example
 <a href="https://codesandbox.io/s/lljsl">LIVE EXAMPLE</a>
 
 A working example can be found in the `example` directory.

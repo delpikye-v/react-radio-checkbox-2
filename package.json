@@ -1,6 +1,6 @@
 {
   "name": "react-radio-checkbox-2z",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React components, customize radio/checkbox. (Single option)",
   "main": "build/index.js",
   "module": "build/index.js",
